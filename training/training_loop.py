@@ -42,8 +42,8 @@ def locate_latest_pkl(result_dir):
 # periodically during training.
 
 def setup_snapshot_image_grid(training_set):
-    gw = np.clip(7680 // training_set.shape[2], 25, 50)
-    gh = np.clip(4320 // training_set.shape[1], 28, 56)
+    gw = np.clip(7680 // training_set.shape[2], 7, 32)
+    gh = np.clip(4320 // training_set.shape[1], 4, 32)
 
     # Unconditional.
     if training_set.label_size == 0:
