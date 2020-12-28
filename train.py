@@ -195,7 +195,7 @@ def setup_training_options(
     args.minibatch_size = spec.mb
     args.minibatch_gpu = spec.mb // spec.ref_gpus
     args.D_args.mbstd_group_size = spec.mbstd
-    args.G_args.fmap_base = args.D_args.fmap_base = int(spec.fmaps * 18384)
+    args.G_args.fmap_base = args.D_args.fmap_base = int(spec.fmaps * 16384)
     args.G_args.fmap_max = args.D_args.fmap_max = 512
     args.G_opt_args.learning_rate = args.D_opt_args.learning_rate = spec.lrate
     args.loss_args.r1_gamma = spec.gamma
