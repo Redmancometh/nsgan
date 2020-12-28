@@ -351,7 +351,7 @@ def G_synthesis(
     min_w               = 4,
     res_log2            = 8,
     # Capacity.
-    fmap_base           = 16384,        # Overall multiplier for the number of feature maps.
+    fmap_base           = 18384,        # Overall multiplier for the number of feature maps.
     fmap_decay          = 1,            # Log2 feature map reduction when doubling the resolution.
     fmap_min            = 1,            # Minimum number of feature maps in any layer.
     fmap_max            = 512,          # Maximum number of feature maps in any layer.
