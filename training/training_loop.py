@@ -22,8 +22,9 @@ from training import dataset
 
 import glob
 import re
-#-------------- functions from Miscellaneous
 
+
+#-------------- functions from Miscellaneous
 def locate_latest_pkl(result_dir):
     splitdir = os.path.split(result_dir)
     result_dir = splitdir[0]
@@ -138,7 +139,7 @@ def training_loop(
         G = tflib.Network('G', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **G_args)
         D = tflib.Network('D', num_channels=training_set.shape[0], resolution=training_set.shape[1], label_size=training_set.label_size, **D_args)
         Gs = G.clone('Gs')
-        resume_kimg = 2500
+        resume_kimg = 0
         print('resume_pkl = ',resume_pkl)
         if resume_pkl is not None:
             #####
